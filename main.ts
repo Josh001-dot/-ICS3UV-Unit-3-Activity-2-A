@@ -2,39 +2,26 @@
  * @author Joshua Adeyemi
  * @version 1.0.0
  * @date 2025-12-05
- * @fileoverview This program will ask the user for their name, a course they are currently taking in school, and the last three test marks for that course. the output of the program wil be the students name, their course, the three marks, and the avarage of the three tests marks.
+ * @fileoverview This program will ask the user for their name, a course they are currently taking in school, and the last three test marks for that course. The output will be the student's name, their course, the three marks, and the average of the three test marks.
  */
 
-// variables
-let userName: string;
-let courseName: string;
-let mark1AsString: string;
-let mark2AsString: string;
-let mark3AsString: string;
-let mark1AsNumber: number;
-let mark2AsNumber: number;
-let mark3AsNumber: number;
-let averageMark: number;
+// input (all const because they never change)
+const userName: string = prompt("What is your name?") || "No name entered!";
+const courseName: string = prompt("What course are you currently taking?") || "No course entered!";
+const mark1AsString: string = prompt("Enter the first test mark:") || "0";
+const mark2AsString: string = prompt("Enter the second test mark:") || "0";
+const mark3AsString: string = prompt("Enter the third test mark:") || "0";
 
-// input
-userName = prompt("What is your name?") || "No name entered!";
-courseName = prompt("What course are you currently taking?") || 
-"No course entered!";
-mark1AsString = prompt("Enter the first test mark:") || "0";
-mark2AsString = prompt("Enter the second test mark:") || "0";
-mark3AsString = prompt("Enter the third test mark:") || "0";
-
-//process
-mark1AsNumber = parseInt(mark1AsString);
-mark2AsNumber = parseInt(mark2AsString);
-mark3AsNumber = parseInt(mark3AsString);
-averageMark = (mark1AsNumber + mark2AsNumber + mark3AsNumber) / 3;
+// process
+const mark1AsNumber: number = parseInt(mark1AsString);
+const mark2AsNumber: number = parseInt(mark2AsString);
+const mark3AsNumber: number = parseInt(mark3AsString);
+const averageMark: number = (mark1AsNumber + mark2AsNumber + mark3AsNumber) / 3;
 
 // output
 console.log("\n");
 console.log("Hello, " + userName + "!");
 console.log("You are taking: " + courseName + ".");
-console.log("Your marks are: " + mark1AsNumber + ", " + mark2AsNumber + ", and " + mark3AsString + ".");
-console.log("Your average mark is: "+ averageMark + ".");
-
+console.log("Your marks are: " + mark1AsNumber + ", " + mark2AsNumber + ", and " + mark3AsNumber + ".");
+console.log("Your average mark is: " + averageMark + ".");
 console.log("\nDone.");
